@@ -11,7 +11,8 @@ public class FirstAndSecondBigNums{
         int numInt=inpInt.nextInt();
         int [] arrNums=new int[numInt];
         int bigNum, secBignum;
- 
+        //Comment 1
+        
         //Input number of integers into an array
         System.out.println("Enter "+numInt+" integers");
         for(int i=0;i<numInt;i++) {
