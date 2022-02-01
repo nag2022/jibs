@@ -6,11 +6,11 @@ public class FirstAndSecondBigNums{
  
     public static void main(String [] args) {
  
-        Scanner inpInt=new Scanner(System.in);
+        @SuppressWarnings("resource")
+		Scanner inpInt=new Scanner(System.in);
         System.out.println("Enter number of integers input to the array");
         int numInt=inpInt.nextInt();
         int [] arrNums=new int[numInt];
-        int bigNum, secBignum;
         //Comment 1
         
         //Input number of integers into an array
@@ -18,12 +18,18 @@ public class FirstAndSecondBigNums{
         for(int i=0;i<numInt;i++) {
             arrNums[i]=inpInt.nextInt();
         }
- 
-        //Assign the by default the arrNums[0] to the variables first big and second big
+        
+        FirstAndSecondBiggest (arrNums);
+    }
+  
+     public static void FirstAndSecondBiggest (int arrNums[]) {
+
+    	int bigNum, secBignum;
+    	//Assign the by default the arrNums[0] to the variables first big and second big
         bigNum=secBignum=arrNums[0];
  
         //Find the first big and second big numbers from this array of integers
-        for(int i=1;i<numInt;i++) {
+        for(int i=1;i<arrNums.length;i++) {
             if(arrNums[i]>bigNum) {
                 secBignum=bigNum;
                 bigNum=arrNums[i];
